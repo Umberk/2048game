@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048游戏 - 王心阳作品</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>2048 游戏</h1>
+            <p class="subtitle">使用 ↑ ↓ ← → 或 W A S D 键移动方块</p>
+        </div>
+
+        <div class="game-info">
+            <div class="score-container">
+                <div class="score-label">当前分数</div>
+                <div class="score" id="score">0</div>
+            </div>
+            <div class="score-container">
+                <div class="score-label">最高分</div>
+                <div class="score" id="best-score">0</div>
+            </div>
+        </div>
+
+        <div class="username-section" id="username-section">
+            <input type="text" id="username-input" placeholder="请输入你的名字（5个字符内）" maxlength="5">
+            <button id="start-button">开始游戏</button>
+        </div>
+
+        <div class="game-container" id="game-container" style="display:none;">
+            <div class="grid-container" id="grid-container"></div>
+            <div class="game-over" id="game-over" style="display:none;">
+                <p id="game-message">游戏结束!</p>
+                <button id="restart-button">重新开始</button>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="control-btn" id="new-game">新游戏</button>
+        </div>
+
+        <div class="scoreboard" id="scoreboard">
+            <h2>排行榜</h2>
+            <div id="scoreboard-list"></div>
+        </div>
+
+        <div class="footer">
+            <p>© 2023 王心阳 | NXU 22级软件工程一班</p>
+            <p>C语言实训项目 - Web版本</p>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
+
